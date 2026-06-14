@@ -1,17 +1,24 @@
-export type VoteLocation = {
-  id: string;
-  label: string;
-};
+export { validLocationIds, voteLocations, type VoteLocation } from '../convex/locations';
+import { voteLocations, type VoteLocation } from '../convex/locations';
 
-export const voteLocations: VoteLocation[] = [
-  { id: 'beograd', label: 'Beograd' },
-  { id: 'novi-sad', label: 'Novi Sad' },
-  { id: 'nis', label: 'Niš' },
-  { id: 'kragujevac', label: 'Kragujevac' },
-  { id: 'subotica', label: 'Subotica' },
-  { id: 'zrenjanin', label: 'Zrenjanin' },
-  { id: 'cacak', label: 'Čačak' },
-  { id: 'kraljevo', label: 'Kraljevo' },
-  { id: 'novi-pazar', label: 'Novi Pazar' },
-  { id: 'pristina', label: 'Priština' },
-];
+export function searchVoteLocations(query: string): VoteLocation[] {
+  const normalizedQuery = normalizeVoteLocationText(query);
+
+  if (!normalizedQuery) {
+    return [...voteLocations];
+  }
+
+  return voteLocations.filter((location) =>
+    normalizeVoteLocationText(location.label).includes(normalizedQuery),
+  );
+}
+
+function normalizeVoteLocationText(value: string) {
+  return value
+    .trim()
+    .replaceAll('đ', 'dj')
+    .replaceAll('Đ', 'dj')
+    .toLowerCase()
+    .normalize('NFD')
+    .replaceAll(/\p{Diacritic}/gu, '');
+}

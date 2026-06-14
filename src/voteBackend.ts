@@ -16,6 +16,7 @@ export type SubmitVoteResult = {
 };
 
 export type VoteTotals = {
+  isLoading: boolean;
   total: number;
   byLocation: Array<{
     locationId: string;
@@ -28,5 +29,11 @@ export function useSubmitVote() {
 }
 
 export function useVoteTotals(): VoteTotals {
-  return useQuery(api.votes.totals) ?? { byLocation: [], total: 0 };
+  const totals = useQuery(api.votes.totals);
+
+  if (!totals) {
+    return { byLocation: [], isLoading: true, total: 0 };
+  }
+
+  return { ...totals, isLoading: false };
 }

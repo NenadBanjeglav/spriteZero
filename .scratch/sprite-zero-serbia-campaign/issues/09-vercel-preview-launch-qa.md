@@ -26,6 +26,6 @@ Prepare a Vercel Deployment preview for human review on a Vercel subdomain. The 
 - .scratch/sprite-zero-serbia-campaign/issues/03-complete-serbian-location-list.md
 - .scratch/sprite-zero-serbia-campaign/issues/04-post-vote-serbia-demand-map.md
 - .scratch/sprite-zero-serbia-campaign/issues/05-share-after-vote-and-analytics-signals.md
-- .scratch/sprite-zero-serbia-campaign/issues/06-five-part-cinematic-story-experience.md
+- .scratch/sprite-zero-serbia-campaign/issues/06-expanded-cinematic-story-experience.md
 - .scratch/sprite-zero-serbia-campaign/issues/07-runway-video-loop-production-and-integration.md
 - .scratch/sprite-zero-serbia-campaign/issues/08-privacy-seo-social-metadata-and-footer-disclosure.md

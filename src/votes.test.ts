@@ -54,6 +54,26 @@ describe('votes', () => {
     expect(totals).toEqual({ byLocation: [], total: 0 });
   });
 
+  it('accepts Kosovo municipalities from the complete controlled location list', async () => {
+    const t = convexTest(schema, modules);
+
+    const result = await t.mutation(api.votes.submit, {
+      clientId: 'kosovo-client',
+      consentCopyVersion: 'vote-consent-v1',
+      email: 'zvecan@example.com',
+      honeypot: '',
+      locationId: 'zvecan',
+      userAgentHash: 'ua-kosovo',
+    });
+    const totals = await t.query(api.votes.totals);
+
+    expect(result).toEqual({ locationId: 'zvecan', status: 'counted' });
+    expect(totals).toEqual({
+      byLocation: [{ count: 1, locationId: 'zvecan' }],
+      total: 1,
+    });
+  });
+
   it('rate-limits repeated attempts from the same client', async () => {
     const t = convexTest(schema, modules);
 

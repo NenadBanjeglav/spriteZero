@@ -9,7 +9,7 @@ A public-facing campaign that invites Serbian consumers to express interest in S
 _Avoid_: Pitch deck, landing page, petition
 
 **Decision-Maker Audience**:
-The business audience the campaign is meant to influence, especially Coca-Cola Serbia and its local product stakeholders.
+The business audience the campaign is meant to influence, especially Coca-Cola HBC Srbija and its local product stakeholders.
 _Avoid_: Client, company, brand owner
 
 **Demand Signal**:
@@ -61,7 +61,7 @@ Concrete product-adjacent visuals such as cold glass, fizz, lemon-lime slices, i
 _Avoid_: Abstract-only emotion, generic green atmosphere, unreadable product fantasy
 
 **Quiet Campaign Disclosure**:
-A secondary disclosure that the campaign is public and unofficial, kept out of the main cinematic story and placed only where credibility or legal clarity requires it, such as the footer or privacy page.
+A secondary disclosure that the campaign is public, unofficial, and not affiliated with The Coca-Cola Company or Coca-Cola HBC Srbija, kept out of the main cinematic story and placed only where credibility or legal clarity requires it, such as the footer or privacy page.
 _Avoid_: Hero disclaimer, intrusive legal copy, official endorsement claim
 
 **Serbian Latin Voice**:
@@ -73,7 +73,7 @@ The campaign copy style: emotional and visual, but still concise, credible, and 
 _Avoid_: Youth slang, corporate pitch copy, meme copy
 
 **Scroll-Driven Cinematic Motion**:
-The primary animation style: GSAP-powered scroll reveals, parallax, light, condensation, fizz, scene transitions, and map pin motion that support the story without blocking usability.
+The primary animation style: GSAP ScrollTrigger and Lenis powered scroll reveals, parallax, light, condensation, fizz, scene transitions, and map pin motion that support the story without blocking usability.
 _Avoid_: Constant motion, decorative animation, form-blocking effects
 
 **Reduced-Motion Respect**:
@@ -100,9 +100,21 @@ _Avoid_: AI-generated text, readable packaging labels, video-only messaging
 The opening cinematic moment: a cold fridge scene where zero-sugar choices exist, but the Sprite Zero space is visibly empty.
 _Avoid_: Product hero, launch announcement, generic beverage hero
 
-**Five-Part Story Arc**:
-The first-version campaign structure: empty fridge, Serbian moments, zero-sugar shift, demand map, and final ask to Coca-Cola Serbia.
-_Avoid_: Long microsite, product catalogue, corporate presentation
+**Expanded Cinematic Story Arc**:
+The campaign structure: cover intro, empty fridge, world contrast, Serbia demand, imagined local arrival, final ask, and open letter.
+_Avoid_: Five-part-only arc, long microsite, product catalogue, corporate presentation
+
+**World Contrast Scene**:
+The story beat that shows Sprite Zero exists in other markets while Serbia still lacks the same zero-sugar lemon-lime choice.
+_Avoid_: Market report, country ranking, travel brag
+
+**Imagine It Here Scene**:
+The story beat that shows Sprite Zero fitting naturally into Serbian everyday moments as a desired future rather than a launch claim.
+_Avoid_: Official launch scene, retail availability claim, generic product fantasy
+
+**Open Letter**:
+A readable closing support section that states the campaign's serious request to Coca-Cola HBC Srbija after the cinematic story.
+_Avoid_: Legal page, complaint letter, petition wall
 
 **Single-Page Campaign Experience**:
 The main site structure: one continuous cinematic scroll page for the campaign story, with separate utility routes only where needed.
@@ -117,7 +129,7 @@ The campaign's single visual theme: cold, dark, cinematic atmosphere with green,
 _Avoid_: Light mode, theme switcher, generic dark mode
 
 **Final Ask**:
-The campaign's closing message to Coca-Cola Serbia: bring Sprite Zero to the Serbian places where people are already asking for it.
+A closing message addressed to Coca-Cola HBC Srbija: bring Sprite Zero to the Serbian places where people are already asking for it.
 _Avoid_: Demand letter, complaint, launch claim
 
 **Availability Gap Note**:

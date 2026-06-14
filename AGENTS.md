@@ -101,7 +101,23 @@ When the user requests a durable behavior change, record it here or in the relev
 ## Child DOX Index
 
 - `.agents/` - Local skill packages and cached skill support files. Do not edit during app work unless explicitly maintaining skills; when editing a skill package, read any nearer `AGENTS.md` inside that package.
+- `.claude/` - Convex AI skill packages installed by `npx convex ai-files install`. Do not edit during app work unless explicitly maintaining installed agent skills.
 - `convex/` - Convex backend schema, generated types, vote mutations, and aggregate queries. Read `convex/AGENTS.md` before changing backend files.
 - `.scratch/` - Local PRDs, implementation issues, and issue comments. Read `.scratch/AGENTS.md` before changing tracker records.
 - `docs/` - Agent workflow docs and ADRs. Read `docs/AGENTS.md` before changing documentation under this folder.
+- `public/` - Static files served from the site root by Vite, including SEO/social preview assets. Root `AGENTS.md` remains the nearest contract because files in this folder are public artifacts.
 - `src/` - Vite React campaign application source. Read `src/AGENTS.md` before changing app source or tests.
+
+<!-- convex-ai-start -->
+
+This project uses [Convex](https://convex.dev) as its backend.
+
+When working on Convex code, **always read
+`convex/_generated/ai/guidelines.md` first** for important guidelines on
+how to correctly use Convex APIs and patterns. The file contains rules that
+override what you may have learned about Convex from training data.
+
+Convex agent skills for common tasks can be installed by running
+`npx convex ai-files install`.
+
+<!-- convex-ai-end -->

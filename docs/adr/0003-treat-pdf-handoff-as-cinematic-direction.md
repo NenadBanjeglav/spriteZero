@@ -1,0 +1,3 @@
+# Treat PDF Handoff As Cinematic Direction
+
+The cinematic handoff PDF is the target for scroll-driven presentation quality, scene structure, and emotional pacing, but it does not replace the campaign's domain model. We will preserve the existing email-backed vote, controlled Serbian location list, real aggregate counts, and no-fake-momentum rules because they make the Public Demand Campaign credible to Serbian consumers and the Decision-Maker Audience; PDF suggestions such as fingerprint-only voting or example supporter counts are implementation references only when they do not weaken that demand signal.

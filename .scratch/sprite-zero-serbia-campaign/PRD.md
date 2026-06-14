@@ -2,9 +2,9 @@
 
 ## Summary
 
-Build a mobile-first cinematic public demand campaign for Sprite Zero in Serbia. The site should make Serbian visitors feel the absence of Sprite Zero, invite them to cast an email-backed vote, and turn those votes into visible demand proof for Coca-Cola Serbia.
+Build a mobile-first cinematic public demand campaign for Sprite Zero in Serbia. The site should make Serbian visitors feel the absence of Sprite Zero, invite them to cast an email-backed vote, and turn those votes into visible demand proof for Coca-Cola HBC Srbija.
 
-The v1 product is a Vite + React + Tailwind + GSAP single-page campaign experience with a separate privacy route, Convex vote storage, Vercel Analytics, and Vercel deployment previews.
+The v1 product is a Vite + React + Tailwind + GSAP ScrollTrigger + Lenis single-page campaign experience with a separate privacy route, Convex vote storage, Vercel Analytics, and Vercel deployment previews.
 
 ## Problem
 
@@ -16,7 +16,7 @@ Sprite Zero is not currently available in the Serbian market, but Serbian consum
 - Collect real email-backed votes with city/municipality location data.
 - Show demand visually through a stylized Serbia map with city pins and real vote counts.
 - Give voters a satisfying post-vote moment that reveals their impact and encourages sharing.
-- Keep the campaign credible for Coca-Cola Serbia without making the main story feel like a legal disclaimer.
+- Keep the campaign credible for Coca-Cola HBC Srbija without making the main story feel like a legal disclaimer.
 
 ## Non-Goals
 
@@ -32,7 +32,7 @@ Sprite Zero is not currently available in the Serbian market, but Serbian consum
 
 Primary audience: Serbian consumers who would want Sprite Zero if it were available locally.
 
-Decision-maker audience: Coca-Cola Serbia and local product stakeholders who may be influenced by the public demand signal.
+Decision-maker audience: Coca-Cola HBC Srbija and local product stakeholders who may be influenced by the public demand signal.
 
 ## Core Narrative
 
@@ -40,13 +40,15 @@ Use the Missing From The Fridge Story:
 
 Serbian zero-sugar consumers already have the moments where Sprite Zero belongs, but the product is absent from the fridge, shelves, cafes, and everyday routines.
 
-The five-part story arc:
+The Expanded Cinematic Story Arc:
 
-1. Empty Fridge Hero: a cold fridge scene where the Sprite Zero space is visibly empty.
-2. Serbian Moments: summer city heat, late-night food, study/work breaks, and sport or walks by the river.
-3. Zero-Sugar Shift: Serbia already understands the choice of refreshment without sugar.
-4. Serbia Demand Map: real votes appear as animated city pins and count bubbles.
-5. Final Ask: ask Coca-Cola Serbia to bring Sprite Zero where people are already asking for it.
+1. Cover Intro: create mystery before the fridge with a concise absence statement.
+2. Empty Fridge Hero: a cold fridge scene where the Sprite Zero space is visibly empty.
+3. World Contrast Scene: show that Sprite Zero exists in other markets while Serbia still lacks the same zero-sugar lemon-lime choice.
+4. Serbia Demand Map: real email-backed votes appear as animated city pins and count bubbles.
+5. Imagine It Here Scene: show Sprite Zero fitting naturally into Serbian everyday moments such as summer city heat, late-night food, study/work breaks, and sport or walks by the river.
+6. Final Ask: ask Coca-Cola HBC Srbija to bring Sprite Zero where people are already asking for it.
+7. Open Letter: close with a readable serious request after the cinematic story.
 
 ## Copy Direction
 
@@ -75,7 +77,7 @@ Jedno mesto u frižideru je još prazno.
 Final ask direction:
 
 ```text
-Coca-Cola Srbija, donesite Sprite Zero tamo gde ga ljudi već traže.
+Coca-Cola HBC Srbija, donesite Sprite Zero tamo gde ga ljudi već traže.
 ```
 
 Include a short factual availability gap note in the zero-sugar shift section:
@@ -113,6 +115,8 @@ Loops should be atmospheric video loops:
 - all readable copy, forms, counts, and CTAs must be rendered in React UI
 
 Other sections may use generated still imagery, CSS, SVG, Canvas, and GSAP instead of full video.
+
+The Expanded Cinematic Story Arc may be implemented and tested with the existing generated stills and development video loops first. Final Runway-approved production loops are a later asset swap and must not block scroll architecture, copy, layout, vote flow, or reduced-motion work.
 
 ## UX Structure
 
@@ -256,7 +260,7 @@ It should explain:
 - what is not shown publicly: raw email addresses and individual identities
 - how to request deletion or contact the campaign owner
 
-The footer may include a quiet public/unofficial campaign disclosure and privacy link. Do not place heavy disclaimer copy in the hero.
+The footer may include a quiet public/unofficial campaign disclosure and privacy link. The disclosure should make clear that the campaign is not affiliated with The Coca-Cola Company or Coca-Cola HBC Srbija. Do not place heavy disclaimer copy in the hero.
 
 ## Accessibility And Motion
 
@@ -265,6 +269,12 @@ Support reduced motion:
 - respect `prefers-reduced-motion`
 - avoid aggressive scroll/parallax behavior for reduced-motion users
 - keep story comprehension available without animation
+
+Animation ownership:
+
+- GSAP ScrollTrigger owns pinned cinematic scenes, scrubbed text beats, scene holds, and scroll-linked transitions.
+- Lenis owns smooth scrolling and is synchronized with ScrollTrigger.
+- React owns voting, forms, sharing, accessibility states, and data rendering; cinematic animation must not block demand interactions.
 
 General requirements:
 
@@ -300,6 +310,7 @@ Use a Vercel subdomain for development. A dedicated public domain can be decided
 ## Acceptance Criteria
 
 - The main route renders a polished single-page cinematic campaign.
+- The main route follows the Expanded Cinematic Story Arc: cover intro, empty fridge, world contrast, Serbia demand, imagined local arrival, final ask, and open letter.
 - The `/privacy` route exists and is linked from the footer and vote form note.
 - The hero uses emotion-first copy and does not show live vote numbers.
 - The primary CTA text is "Hoću Sprite Zero u Srbiji".
@@ -313,9 +324,11 @@ Use a Vercel subdomain for development. A dedicated public domain can be decided
 - Post-vote sharing is available.
 - Vercel Analytics is installed and tracks the agreed events.
 - No Vercel Speed Insights dependency is included in v1.
+- Cinematic scroll behavior uses GSAP ScrollTrigger synchronized with Lenis, not CSS scroll timelines as the primary animation system.
 - Motion respects `prefers-reduced-motion`.
 - Mobile layout is first-class and desktop layout remains cinematic.
 - Three video loop slots exist for hero, Serbian moments, and final ask, with still/placeholder fallbacks while final Runway assets are pending.
+- Final production loop replacement remains gated on human approval of prompts and rendered files.
 
 ## Open Questions
 
