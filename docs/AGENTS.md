@@ -24,3 +24,4 @@
 
 - `agents/` - Skill-facing workflow docs for issue tracking, triage labels, and domain docs. Read `docs/agents/AGENTS.md` before edits.
 - `adr/` - Architecture decision records. Read `docs/adr/AGENTS.md` before edits.
+- `superpowers/` - Superpowers-generated design specs and implementation plans. Read `docs/superpowers/AGENTS.md` before edits.
